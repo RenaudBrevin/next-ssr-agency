@@ -19,3 +19,9 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.container {
+  min-width: 100%;
+  padding-right: 32px;
+  padding-left: 32px;
+}
