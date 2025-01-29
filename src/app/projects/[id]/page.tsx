@@ -1,11 +1,12 @@
 'use client';
 
-import { getProjectById } from '@/app/action';
+import { getProjectById } from '@/app/actions';
 import { Project } from '@/app/types';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
+import ListItem from '@/components/01-atoms/scroll-item';
 
 function ProjectDetails() {
     const [project, setProject] = useState<Project | null>(null);
@@ -50,13 +51,11 @@ function ProjectDetails() {
                     }
                     <div className="flex flex-wrap gap-4">
                         {technologies?.map((tech, index) => (
-                            <span key={index} className="py-2 px-4 text-sm font-medium border border-gold rounded-full bg-lightBlack">
-                                {tech}
-                            </span>
+                            <ListItem itemLabel={tech} key={index} />
                         ))}
                     </div>
                 </div>
-                <div className="">
+                <div>
                     {imagesUrl && (
                         <Image
                             className="rounded-lg shadow-md object-cover w-full"

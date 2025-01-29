@@ -1,4 +1,4 @@
-import { getProjects } from '@/app/action';
+import { getProjects } from '@/app/actions';
 import { Project } from '@/app/types';
 import ProjectsComponents from '@/components/02-sections/ProjectsComponents';
 
