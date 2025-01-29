@@ -1,0 +1,55 @@
+body {
+    background-image: 
+        url('../../public/curves-section.png'),
+        url('../../public/curves-footer.png');
+    background-position: left left, top right;
+    background-repeat: no-repeat, no-repeat;
+    background-size: cover, contain;
+    background-color: black;
+}
+.hero {
+    height: calc(100vh - 135px);
+}
+
+.carousel-css {
+    position: relative;
+    max-width: 500px;
+    overflow: hidden;
+}
+
+.carousel-css::before,
+.carousel-css::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.carousel-css::before {
+  left: 0;
+  background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+}
+
+.carousel-css::after {
+  right: 0;
+  background: linear-gradient(to left, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+}
+
+.carousel-css ul {
+    will-change: transform;
+    animation: scrolling 10s linear infinite;
+    -webkit-animation: scrolling 10s linear infinite;
+}
+
+
+@keyframes scrolling {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
