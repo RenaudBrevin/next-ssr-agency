@@ -1,7 +1,7 @@
-import type { Metadata } from "next";
+import { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/02-sections/header"
+import Header from "@/components/02-sections/header";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,11 +25,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <head>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&family=Luxurious+Roman&family=New+Rocker&family=Style+Script&display=swap"
+          rel="stylesheet"
+        />
+      </head>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <Header />
-
         {children}
       </body>
     </html>

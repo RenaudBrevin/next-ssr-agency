@@ -24,6 +24,7 @@ export default function Home() {
             priority
           />
           </button>
+          <p className="quote text-white text-3xl font-bold mt-8">"Elite Digital Crafting for Visionary Brands."</p>
         </div>
         <Clients />
       </section>
