@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import './page.css'
+import Link from 'next/link'
 
 export default function Home() {
   return (
@@ -9,7 +9,7 @@ export default function Home() {
         <p className='mr-auto'>LOGO</p>
         <ul className="flex items-center font-bold justify-center border border-white rounded-full bg-lightBlack mx-auto">
           <li className="px-6 py-3.5">
-            <a href="">Projects</a>
+            <Link href="/projects">Project</Link>
           </li>
           <li className="px-6 py-3.5">
             <a href="">About us</a>
