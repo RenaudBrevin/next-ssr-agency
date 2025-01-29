@@ -3,12 +3,8 @@
 import React, { useRef, useState } from 'react';
 import Image from 'next/image';
 import './page.css';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/pagination';
 import ScrollSlider from '@/components/02-sections/scroll-list';
 import Clients from '@/components/02-sections/clients';
-import { Pagination } from 'swiper/modules';
 
 export default function Home() {
   return (
