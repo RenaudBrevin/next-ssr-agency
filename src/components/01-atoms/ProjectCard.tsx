@@ -7,7 +7,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
     return (
         <Link
             href={`/projects/${project.id}`}
-            className="border border-gold rounded-md shadow-md flex flex-col aspect-square bg-cover justify-end w-64"
+            className="border border-gold rounded-md shadow-md flex flex-col aspect-square bg-cover justify-end w-64 overflow-hidden"
             style={project.projectDetails ? {
                 backgroundImage: `url(${project.projectDetails.imagesUrl[0]})`
             } : undefined}

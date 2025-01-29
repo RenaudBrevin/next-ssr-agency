@@ -1,19 +1,9 @@
-import React from 'react';
-import { Project } from '../../app/types';
-import { PrismaClient } from '@prisma/client'
+import { getProjects } from '@/app/action';
+import { Project } from '@/app/types';
 import ProjectsComponents from '@/components/02-sections/ProjectsComponents';
 
-const prisma = new PrismaClient();
-
 async function Projects() {
-    const projects = await prisma.project.findMany({
-        include: {
-            projectDetails: true
-        }
-    });
-
-    console.log(projects);
-
+    const projects = await getProjects();
     return (
         <div className="container my-8 flex flex-col gap-8">
             <h1 className='text-center uppercase hero--title text-4xl font-bold'>
