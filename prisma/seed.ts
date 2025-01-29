@@ -14,7 +14,7 @@ async function main() {
                     objectives: "Permettre aux utilisateurs de créer, modifier et supprimer des tâches.",
                     technologies: ["React", "Node.js", "PostgreSQL", "Prisma"],
                     results: "Les utilisateurs peuvent gérer leurs tâches avec une interface simple et claire.",
-                    imagesUrl: ["https://www.example.com/images/task-manager.png"]
+                    imagesUrl: ["https://www.example.com/images/task-manager.png"],
                 }
             }
         }
