@@ -20,6 +20,17 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+body {
+  min-height: 100vh;
+  background-image: 
+      url('../../public/curves-section.png'),
+      url('../../public/curves-footer.png');
+  background-position: left left, top right;
+  background-repeat: no-repeat, no-repeat;
+  background-size: cover, contain;
+  background-color: black;
+}
+
 .container {
   min-width: 100%;
   padding-right: 32px;
