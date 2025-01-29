@@ -3,17 +3,18 @@ export type Project = {
     title: string;
     description: string;
     projectUrl: string;
-    projectDetails?: ProjectDetails;
+    projectDetails?: ProjectDetails | null;
 };
 
 export type ProjectDetails = {
     id: number;
     context: string;
     objectives: string;
+    results: string;
     technologies: string[];
     imagesUrl: string[];
-    project?: Project;
-    projectId?: number;
+    project?: Project | null;
+    projectId?: number | null;
 };
 
 export type Contact = {
