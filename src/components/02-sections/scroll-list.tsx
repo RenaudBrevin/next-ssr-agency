@@ -3,13 +3,13 @@ import ListItem from '@/components/01-atoms/scroll-item';
 
 const ScrollList = () => {
   const projects = [
-    { name: "Project 1", link: "#" },
-    { name: "Project 2", link: "#" },
-    { name: "Project 3", link: "#" },
-    { name: "Project 4", link: "#" },
-    { name: "Project 5", link: "#" },
-    { name: "Project 6", link: "#" },
-    { name: "Project 7", link: "#" },
+    { name: "UX/UI", link: "#" },
+    { name: "Web developpement", link: "#" },
+    { name: "SEO", link: "#" },
+    { name: "Communication", link: "#" },
+    { name: "3D", link: "#" },
+    { name: "Experience", link: "#" },
+    { name: "Logic", link: "#" },
   ];
 
   return (

@@ -1,12 +1,20 @@
 import React from 'react';
+import Link from 'next/link';
 
-// List Item Component
 const ListItem = ({ projectName, projectLink }) => {
   return (
     <li className="border border-gray rounded-full py-2 px-4 bg-lightBlack whitespace-nowrap">
-      <a href={projectLink} className="project--link">
-        {projectName}
-      </a>
+      {projectLink ? (
+        <Link href={projectLink} className="project--link flex items-center gap-2">
+          <div className="bg-gold w-2 h-2 rounded-full"></div>
+          {projectName}
+        </Link>
+      ) : (
+        <p className="project--link flex items-center gap-2">
+          <div className="bg-gold w-2 h-2 rounded-full"></div>
+          {projectName}
+        </p>
+      )}
     </li>
   );
 };
