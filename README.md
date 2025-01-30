@@ -172,3 +172,26 @@ yarn dev
 ```
 
 Le site sera accessible à l'adresse [http://localhost:3000](http://localhost:3000).
+
+
+
+## Perfomances du site
+
+### Page d'accueil
+
+https://next-ssr-agency-lqrt.vercel.app/readMe/perf-home.png
+
+
+### Page projets
+
+https://next-ssr-agency-lqrt.vercel.app/readMe/perf-projects.png
+
+
+### Page details projet
+
+https://next-ssr-agency-lqrt.vercel.app/readMe/perf-projet.png
+
+
+### Page contact
+
+https://next-ssr-agency-lqrt.vercel.app/readMe/perf-contact.png
