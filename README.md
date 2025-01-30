@@ -177,8 +177,6 @@ Le site sera accessible à l'adresse [http://localhost:3000](http://localhost:30
 
 ## Perfomances du site
 
-## Performances du site
-
 ### Introduction
 
 **Nom du projet :** R&A Paris Web Agency  
