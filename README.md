@@ -177,21 +177,46 @@ Le site sera accessible à l'adresse [http://localhost:3000](http://localhost:30
 
 ## Perfomances du site
 
-### Page d'accueil
+### Introduction
 
-![alt text](https://next-ssr-agency-lqrt.vercel.app/readMe/perf-home.png)
+**Nom du projet :** R&A Paris Web Agency  
+**URL :** [https://next-ssr-agency-lqrt.vercel.app/](https://next-ssr-agency-lqrt.vercel.app/)  
+**Date des analyses :** 30/01/2025  
+**Outils utilisés :** PageSpeed Insights, Lighthouse  
 
+Ce rapport détaille les performances du site R&A Paris Web Agency, analysées à l'aide de PageSpeed Insights et Lighthouse. Il présente les scores obtenus, met en avant les points forts et faibles, et propose des recommandations d'amélioration.
 
-### Page projets
+### Résultats
 
-![alt text](https://next-ssr-agency-lqrt.vercel.app/readMe/perf-projects.png)
+#### Page d'accueil
 
+![Page d'accueil](https://next-ssr-agency-lqrt.vercel.app/readMe/perf-home.png) 
 
-### Page details projet
+#### Page projets
 
-![alt text](https://next-ssr-agency-lqrt.vercel.app/readMe/perf-project.png)
+![Page projets](https://next-ssr-agency-lqrt.vercel.app/readMe/perf-projects.png)
 
+#### Page détails projet
 
-### Page contact
+![Page détails projet](https://next-ssr-agency-lqrt.vercel.app/readMe/perf-project.png)
 
-![alt text](https://next-ssr-agency-lqrt.vercel.app/readMe/perf-contact.png)
+#### Page contact
+
+![Page contact](https://next-ssr-agency-lqrt.vercel.app/readMe/perf-contact.png)
+
+### Recommandations
+
+#### Amélioration des performances
+- **Optimiser les images** en utilisant des formats modernes comme WebP ou AVIF.
+- **Mettre en place un lazy loading** pour les images et vidéos afin de réduire le temps de chargement.
+- **Utiliser la mise en cache** pour minimiser le temps de chargement des ressources statiques.
+
+#### Amélioration de l'accessibilité
+- Ajouter des **attributs `alt` aux images**.
+- Améliorer le **contraste des couleurs** pour assurer une meilleure lisibilité.
+- Vérifier la **navigabilité au clavier** et l’utilisation des lecteurs d’écran.
+
+#### Amélioration du SEO
+- Ajouter un **sitemap.xml** et un fichier **robots.txt**.
+
+Ces recommandations permettront d’améliorer la rapidité, l’accessibilité et le référencement du site R&A Paris Web Agency.
