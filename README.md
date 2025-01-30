@@ -204,16 +204,6 @@ Ce rapport détaille les performances du site R&A Paris Web Agency, analysées �
 
 ![Page contact](https://next-ssr-agency-lqrt.vercel.app/readMe/perf-contact.png)
 
-**Scores obtenus :**  
-- Performance : XX/100  
-- Accessibilité : XX/100  
-- Bonnes pratiques : XX/100  
-- SEO : XX/100  
-
-**Analyse :**  
-- Points forts : (Détailler les points positifs)  
-- Points faibles : (Détailler les points à améliorer)  
-
 ### Recommandations
 
 #### Amélioration des performances
