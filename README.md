@@ -189,7 +189,7 @@ Le site sera accessible à l'adresse [http://localhost:3000](http://localhost:30
 
 ### Page details projet
 
-![alt text](https://next-ssr-agency-lqrt.vercel.app/readMe/perf-projet.png)
+![alt text](https://next-ssr-agency-lqrt.vercel.app/readMe/perf-project.png)
 
 
 ### Page contact
