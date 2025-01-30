@@ -79,7 +79,7 @@ async function main() {
         data: {
             title: "Fidesio - Refonte site de l'agence",
             description: "Fidesio est une agence web. Le site de l'agence a été refondu pour mettre en avant les compétences de l'équipe et les projets réalisés.",
-            projectUrl: "https://www.bijouxcn.com/Page.aspx",
+            projectUrl: "https://www.fidesio.com/",
             projectDetails: {
                 create: {
                     context: "Fidesio souhaitait moderniser son site pour accroître sa visibilité.",

@@ -26,6 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <link rel="icon" href="/logo-riche.gif" />
         <link
           href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&family=Luxurious+Roman&family=New+Rocker&family=Style+Script&display=swap"
           rel="stylesheet"
