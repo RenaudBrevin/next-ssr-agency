@@ -17,10 +17,14 @@ const ProjectsComponents = ({ projects }: { projects: Project[] }) => {
     const [selectedTech, setSelectedTech] = useState<string | null>(null);
     const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
 
-    const filteredProjects = selectedTech
-        ? projects.filter(project => project.projectDetails?.technologies.includes(selectedTech))
-        : projects;
-
+    const filteredProjects = selectedTech && selectedCategory
+        ? projects.filter(project => project.projectDetails?.technologies.includes(selectedTech) && project.projectDetails?.categories.includes(selectedCategory))
+        : selectedTech
+            ? projects.filter(project => project.projectDetails?.technologies.includes(selectedTech))
+            : selectedCategory
+                ? projects.filter(project => project.projectDetails?.categories.includes(selectedCategory))
+                : projects;
+                
     return (
         <div>
             <div className="mb-8 flex gap-8 items-center">
