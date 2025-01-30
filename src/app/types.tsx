@@ -13,6 +13,7 @@ export type ProjectDetails = {
     results: string;
     technologies: string[];
     imagesUrl: string[];
+    categories: string[];
     project?: Project | null;
     projectId?: number | null;
 };

@@ -5,7 +5,7 @@ const prisma = new PrismaClient()
 async function main() {
     await prisma.project.create({
         data: {
-            title: "Beauetrra - Refonte site e-commerce",
+            title: "Beauterra - Refonte site e-commerce",
             description: "Beauterra est un site e-commerce pour de la vente B2B vers des pharmacies. Une partie du site est une vitrine B2C pour présenter ses produits au grand public et une seconde partie gère la prise de commande pour les pharmacies cliente.",
             projectUrl: "https://beauterra.com/",
             projectDetails: {
@@ -15,6 +15,7 @@ async function main() {
                     technologies: ["Wordpress", "WooCommerce", "Elementor", "Figma"],
                     results: "Le nombre de commandes a augmenté de 30% depuis la refonte du site. Les visites de particuliers pour se renseigner sur les produits ont augmenté de 20%.",
                     imagesUrl: ["beauterra.webp"],
+                    categories: ["e-commerce", "refonte"]
                 }
             }
         }
@@ -32,6 +33,7 @@ async function main() {
                     technologies: ["Twig", "Drupal", "Tailwind", "Figma"],
                     results: "Depuis la refonte, le trafic a augmenté de 40%, et les visites de particuliers intéressés par les produits ont progressé de 20%.",
                     imagesUrl: ["MBDA.png"],
+                    categories: ["industrie", "refonte"]
                 }
             }
         }        
@@ -48,7 +50,8 @@ async function main() {
                     objectives: "L'objectif est d'offrir une vitrine claire et percutante, optimisée pour une navigation rapide et une compatibilité mobile parfaite.",
                     technologies: ["Wordpress", "Elementor", "Figma", "Matomo"],
                     results: "Le site a bénéficié d'une forte hausse de trafic après la campagne TV, plus de 20 000 visites sur le site.",
-                    imagesUrl: ["meteogaz.webp"]
+                    imagesUrl: ["meteogaz.webp"],
+                    categories: ["industrie", "landing page"]
                 }
             }
         }
@@ -65,7 +68,8 @@ async function main() {
                     objectives: "L'objectif est de moderniser le site pour le rendre plus attractif et plus facile à utiliser pour les visiteurs.",
                     technologies: ["Twig", "Tailwind", "Client Relou"],
                     results: "Le site a bénéficié d'une hausse de 30% des ventes après la refonte.",
-                    imagesUrl: ["CDN.png"]
+                    imagesUrl: ["CDN.png"],
+                    categories: ["e-commerce"]
                 }
             }
         }
@@ -82,7 +86,8 @@ async function main() {
                     objectives: "Un design avant-gardiste et une navigation intuitive pour mettre en avant les compétences de l'équipe et les projets réalisés.",
                     technologies: ["Twig", "Tailwind"],
                     results: "Le site a bénéficié d'une hausse de 30% de clients après la refonte.",
-                    imagesUrl: ["fidesio.png"]
+                    imagesUrl: ["fidesio.png"],
+                    categories: ["agence", "refonte"]
                 }
             }
         }
