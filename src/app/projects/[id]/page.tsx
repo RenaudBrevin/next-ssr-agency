@@ -42,7 +42,7 @@ function ProjectDetails() {
                     <h1 className="uppercase hero--title text-4xl font-bold text-gold">{project.title}</h1>
                     {
                         content && (
-                            <div 
+                            <div
                                 className="md:w-[80%]"
                                 dangerouslySetInnerHTML={{ __html: content }}
                             />
@@ -56,7 +56,7 @@ function ProjectDetails() {
                         ))}
                     </div>
                 </div>
-                <div className="">
+                <div className="w-[50%]">
                     {imagesUrl && (
                         <Image
                             className="rounded-lg shadow-md object-cover w-full"
@@ -76,23 +76,23 @@ function ProjectDetails() {
                 >
                     View project
                     <div className=" rotate-45">
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                    >
-                        <path
-                            fill="none"
-                            stroke="#FFD700"
-                            className="group-hover:stroke-black transition-colors duration-300 ease-in-out"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="1.5"
-                            d="M12 20V4m-7 7l7-7l7 7"
-                        />
-                    </svg>
-                </div>
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                        >
+                            <path
+                                fill="none"
+                                stroke="#FFD700"
+                                className="group-hover:stroke-black transition-colors duration-300 ease-in-out"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth="1.5"
+                                d="M12 20V4m-7 7l7-7l7 7"
+                            />
+                        </svg>
+                    </div>
                 </Link>
             </div>
         </div>
