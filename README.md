@@ -177,21 +177,58 @@ Le site sera accessible à l'adresse [http://localhost:3000](http://localhost:30
 
 ## Perfomances du site
 
-### Page d'accueil
+## Performances du site
 
-![alt text](https://next-ssr-agency-lqrt.vercel.app/readMe/perf-home.png)
+### Introduction
 
+**Nom du projet :** R&A Paris Web Agency  
+**URL :** [https://next-ssr-agency-lqrt.vercel.app/](https://next-ssr-agency-lqrt.vercel.app/)  
+**Date des analyses :** 30/01/2025  
+**Outils utilisés :** PageSpeed Insights, Lighthouse  
 
-### Page projets
+Ce rapport détaille les performances du site R&A Paris Web Agency, analysées à l'aide de PageSpeed Insights et Lighthouse. Il présente les scores obtenus, met en avant les points forts et faibles, et propose des recommandations d'amélioration.
 
-![alt text](https://next-ssr-agency-lqrt.vercel.app/readMe/perf-projects.png)
+### Résultats
 
+#### Page d'accueil
 
-### Page details projet
+![Page d'accueil](https://next-ssr-agency-lqrt.vercel.app/readMe/perf-home.png) 
 
-![alt text](https://next-ssr-agency-lqrt.vercel.app/readMe/perf-project.png)
+#### Page projets
 
+![Page projets](https://next-ssr-agency-lqrt.vercel.app/readMe/perf-projects.png)
 
-### Page contact
+#### Page détails projet
 
-![alt text](https://next-ssr-agency-lqrt.vercel.app/readMe/perf-contact.png)
+![Page détails projet](https://next-ssr-agency-lqrt.vercel.app/readMe/perf-project.png)
+
+#### Page contact
+
+![Page contact](https://next-ssr-agency-lqrt.vercel.app/readMe/perf-contact.png)
+
+**Scores obtenus :**  
+- Performance : XX/100  
+- Accessibilité : XX/100  
+- Bonnes pratiques : XX/100  
+- SEO : XX/100  
+
+**Analyse :**  
+- Points forts : (Détailler les points positifs)  
+- Points faibles : (Détailler les points à améliorer)  
+
+### Recommandations
+
+#### Amélioration des performances
+- **Optimiser les images** en utilisant des formats modernes comme WebP ou AVIF.
+- **Mettre en place un lazy loading** pour les images et vidéos afin de réduire le temps de chargement.
+- **Utiliser la mise en cache** pour minimiser le temps de chargement des ressources statiques.
+
+#### Amélioration de l'accessibilité
+- Ajouter des **attributs `alt` aux images**.
+- Améliorer le **contraste des couleurs** pour assurer une meilleure lisibilité.
+- Vérifier la **navigabilité au clavier** et l’utilisation des lecteurs d’écran.
+
+#### Amélioration du SEO
+- Ajouter un **sitemap.xml** et un fichier **robots.txt**.
+
+Ces recommandations permettront d’améliorer la rapidité, l’accessibilité et le référencement du site R&A Paris Web Agency.
