@@ -57,6 +57,7 @@ function ProjectDetails() {
                     </div>
                 </div>
                 <div className="col-span-5">
+
                     {imagesUrl && (
                         <Image
                             className="rounded-lg shadow-md object-cover w-full"
