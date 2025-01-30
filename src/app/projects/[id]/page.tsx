@@ -1,11 +1,13 @@
 'use client';
 
-import { getProjectById } from '@/app/action';
+import { getProjectById } from '@/app/actions';
 import { Project } from '@/app/types';
+import ListItem from '@/components/01-atoms/scroll-item';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
+import ProjectsComponents from '@/components/02-sections/Galery';
 
 function ProjectDetails() {
     const [project, setProject] = useState<Project | null>(null);
@@ -37,8 +39,8 @@ function ProjectDetails() {
 
     return (
         <div className="container my-8 flex flex-col gap-8">
-            <div className="flex justify-around gap-16">
-                <div className="space-y-4">
+            <div className="grid grid-cols-12 gap-8">
+                <div className="col-span-7 flex flex-col gap-8">
                     <h1 className="uppercase hero--title text-4xl font-bold text-gold">{project.title}</h1>
                     {
                         content && (
@@ -50,13 +52,12 @@ function ProjectDetails() {
                     }
                     <div className="flex flex-wrap gap-4">
                         {technologies?.map((tech, index) => (
-                            <span key={index} className="py-2 px-4 text-sm font-medium border border-gold rounded-full bg-lightBlack">
-                                {tech}
-                            </span>
+                            <ListItem itemLabel={tech} key={index} />
                         ))}
                     </div>
                 </div>
-                <div className="w-[50%]">
+                <div className="col-span-5">
+
                     {imagesUrl && (
                         <Image
                             className="rounded-lg shadow-md object-cover w-full"
@@ -64,7 +65,6 @@ function ProjectDetails() {
                             alt="Illustration du projet"
                             width={300}
                             height={200}
-                            priority
                         />
                     )}
                 </div>
@@ -72,6 +72,7 @@ function ProjectDetails() {
             <div className="mt-6 flex justify-center">
                 <Link
                     href={project.projectUrl}
+                    target="_blank"
                     className="px-6 py-3 flex gap-2 rounded-full text-lg font-semibold hover:bg-gray-800 transition bg-lightBlack text-white"
                 >
                     View project
@@ -95,6 +96,9 @@ function ProjectDetails() {
                     </div>
                 </Link>
             </div>
+            {
+                imagesUrl && imagesUrl.length > 2  && <ProjectsComponents images={imagesUrl} />
+            }
         </div>
     );
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Project } from '../../app/types';
+import { Project } from '@/app/types';
 import ProjectCard from '@/components/01-atoms/ProjectCard';
 
 const ProjectsComponents = ({ projects }: { projects: Project[] }) => {
