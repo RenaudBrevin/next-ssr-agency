@@ -10,7 +10,7 @@ const ClientList = () => {
   ];
 
   return (
-    <div className="client-list-container bg-transparent p-2 border border-gray mt-auto mb-4 rounded-xl">
+    <div className="client-list-container bg-transparent p-2 border border-gray mt-auto mb-6 rounded-xl">
       <ul className="clients bg-lightBlack flex items-center gap-6 rounded-xl">
         {clients.map((client, index) => (
           <li className="client" key={index}>
