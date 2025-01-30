@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-const SvgButton = ({ href, text, icon, className = "" }) => {
+const SvgButton = ({ href, text, icon, className = "" }: { href: string; text: string; icon: string; className?: string }) => {
   return (
     <Link
       href={href}

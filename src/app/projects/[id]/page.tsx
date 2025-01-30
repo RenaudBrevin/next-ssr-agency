@@ -7,7 +7,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
-import ProjectsComponents from '@/components/02-sections/Galery';
 
 function ProjectDetails() {
     const [project, setProject] = useState<Project | null>(null);
@@ -96,9 +95,6 @@ function ProjectDetails() {
                     </div>
                 </Link>
             </div>
-            {
-                imagesUrl && imagesUrl.length > 2  && <ProjectsComponents images={imagesUrl} />
-            }
         </div>
     );
 }

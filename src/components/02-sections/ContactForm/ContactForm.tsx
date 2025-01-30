@@ -1,9 +1,9 @@
 'use client';
 
-import { useState, FormEvent, useRef, useEffect } from 'react';
-import { addContact } from '../../../app/actions';
-import Image from 'next/image';
 import gsap from 'gsap';
+import Image from 'next/image';
+import { FormEvent, useEffect, useRef, useState } from 'react';
+import { addContact } from '../../../app/actions';
 import './Contactform.css';
 
 type FormStep = 'name' | 'email' | 'message' | 'success';
@@ -26,12 +26,12 @@ export default function ContactForm() {
 
   useEffect(() => {
     // Initialisation des états de visibilité
-    gsap.set([emailRef.current, messageRef.current], { 
-      opacity: 0, 
+    gsap.set([emailRef.current, messageRef.current], {
+      opacity: 0,
       x: 100,
-      display: 'none' 
+      display: 'none'
     });
-    gsap.set(successRef.current, { 
+    gsap.set(successRef.current, {
       opacity: 0,
       scale: 0.8,
       display: 'none'
@@ -63,11 +63,12 @@ export default function ContactForm() {
     return true;
   };
 
-  const showInput = (inputRef: React.RefObject<HTMLDivElement>) => {
-    gsap.set(inputRef.current, { 
+  const showInput = (inputRef: React.RefObject<HTMLDivElement> | null) => {
+    if(!inputRef) return;
+    gsap.set(inputRef.current, {
       display: 'block',
       x: 50,
-      opacity: 0 
+      opacity: 0
     });
     gsap.to(inputRef.current, {
       opacity: 1,
@@ -114,7 +115,7 @@ export default function ContactForm() {
 
       await addContact(formDataToSend);
       setSuccess('Votre message a été envoyé avec succès.');
-      
+
       // Animation de sortie du formulaire
       gsap.to(messageRef.current, {
         opacity: 0,
@@ -132,7 +133,7 @@ export default function ContactForm() {
           });
         }
       });
-      
+
       setCurrentStep('success');
     } catch (err: any) {
       setError(err.message || 'Une erreur est survenue.');
@@ -152,7 +153,7 @@ export default function ContactForm() {
       duration: 0.2,
       onComplete: () => {
         gsap.set(successRef.current, { display: 'none' });
-        gsap.set(nameRef.current, { 
+        gsap.set(nameRef.current, {
           display: 'block',
           opacity: 0,
           x: 50
@@ -169,7 +170,7 @@ export default function ContactForm() {
   return (
     <form ref={formRef} onSubmit={handleSubmit} className="p-8 rounded-md bg-lightBlack border border-gold min-h-[170px]">
       {error && <p className="text-red-500 mb-4">{error}</p>}
-      
+
       <div ref={nameRef} className="form-step">
         <input
           type="text"
