@@ -63,19 +63,19 @@ export default function ContactForm() {
     return true;
   };
 
-  const showInput = (inputRef: React.RefObject<HTMLDivElement> | null) => {
-    if(!inputRef) return;
-    gsap.set(inputRef.current, {
+  const showInput = (inputElement: HTMLDivElement | null) => {
+    if (!inputElement) return; // Vérifie que l'élément est bien défini
+    gsap.set(inputElement, {
       display: 'block',
       x: 50,
       opacity: 0
     });
-    gsap.to(inputRef.current, {
+    gsap.to(inputElement, {
       opacity: 1,
       x: 0,
       duration: 0.2
     });
-  };
+  };    
 
   const handleNext = () => {
     if (currentStep === 'name' && validateField('name')) {
@@ -84,8 +84,9 @@ export default function ContactForm() {
         x: -50,
         duration: 0.2,
         onComplete: () => {
+          if (!nameRef.current || !emailRef.current) return;
           gsap.set(nameRef.current, { display: 'none' });
-          showInput(emailRef);
+          showInput(emailRef.current); // Passe .current ici
         }
       });
       setCurrentStep('email');
@@ -95,13 +96,15 @@ export default function ContactForm() {
         x: -50,
         duration: 0.2,
         onComplete: () => {
+          if (!emailRef.current || !messageRef.current) return;
           gsap.set(emailRef.current, { display: 'none' });
-          showInput(messageRef);
+          showInput(messageRef.current); // Passe .current ici
         }
       });
       setCurrentStep('message');
     }
   };
+    
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -135,8 +138,12 @@ export default function ContactForm() {
       });
 
       setCurrentStep('success');
-    } catch (err: any) {
-      setError(err.message || 'Une erreur est survenue.');
+    } catch (err: unknown) {
+      if (err instanceof Error) {
+        setError(err.message);
+      } else {
+        setError('Une erreur est survenue.');
+      }
     }
   };
 

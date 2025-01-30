@@ -21,7 +21,7 @@ function ProjectDetails() {
                 const projectData = await getProjectById(Number(id));
                 setProject(projectData);
                 setLoading(false);
-            } catch (err) {
+            } catch {
                 setLoading(false);
             }
         };
